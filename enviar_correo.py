@@ -3,8 +3,8 @@ from email.message import EmailMessage
 import getpass
 
 mensaje = EmailMessage()
-mensaje["From"] = "zeneslevaite@gmail.com"
-mensaje["To"] = "zene8778@gmail.com"
+mensaje["From"] = "tu_correo@example.com"
+mensaje["To"] = "destinatario@example.com"
 mensaje["Subject"] = "Prueba de correo desde Python"
 mensaje.set_content("Hola, este es un correo enviado desde Python usando SMTP_SSL.")
 
@@ -18,5 +18,6 @@ with smtplib.SMTP_SSL(smtp_server, smtp_port) as server:
     server.send_message(mensaje)
 
 print("Correo enviado correctamente.")
+
 
 
